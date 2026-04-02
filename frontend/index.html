@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Spam Detector</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Animated Shapes -->
+    <div class="blob shape1"></div>
+    <div class="blob shape2"></div>
+    <div class="blob shape3"></div>
+
+    <div class="glass-container">
+        <header>
+            <div class="logo-container">
+                <i class="fa-solid fa-shield-halved floating-icon"></i>
+            </div>
+            <h1>AI Spambot <span>Detector</span></h1>
+            <p>Powered by Advanced BERT Transformer Models</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <label for="emailInput">Analyze Email Content</label>
+                <div class="textarea-wrapper">
+                    <textarea id="emailInput" placeholder="Paste the suspicious email contents here..."></textarea>
+                    <div class="scan-line" id="scanLine"></div>
+                </div>
+                
+                <button id="analyzeBtn" class="btn-primary">
+                    <span class="btn-text">Detect Spam</span>
+                    <i class="fa-solid fa-radar btn-icon"></i>
+                </button>
+            </div>
+
+            <!-- Result Section (Initially Hidden) -->
+            <div class="result-section hidden" id="resultSection">
+                <div class="loading-state hidden" id="loadingState">
+                    <div class="spinner"></div>
+                    <p>Agent is analyzing text...</p>
+                </div>
+
+                <div class="verdict-card hidden" id="verdictCard">
+                    <div class="icon-ring" id="resultIconRing">
+                        <i class="" id="resultIcon"></i>
+                    </div>
+                    <h2 id="resultTitle">System Ready</h2>
+                    <div class="confidence-meter">
+                        <div class="meter-bar">
+                            <div class="meter-fill" id="meterFill"></div>
+                        </div>
+                        <p class="confidence-text">Confidence: <span id="confidenceValue">0%</span></p>
+                    </div>
+                    <p class="detail-text" id="detailText">Awaiting input...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
